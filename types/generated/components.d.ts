@@ -71,15 +71,16 @@ export interface ThumbnailCustomerStoryThumbnail
   extends Struct.ComponentSchema {
   collectionName: 'components_thumbnail_customer_story_thumbnails';
   info: {
+    description: '';
     displayName: 'Customer Story Thumbnail';
     icon: 'picture';
   };
   attributes: {
     BrandName: Schema.Attribute.String & Schema.Attribute.Required;
     Description: Schema.Attribute.Text & Schema.Attribute.Required;
-    Quote: Schema.Attribute.Text & Schema.Attribute.Required;
-    Thumbnail: Schema.Attribute.Media<'images' | 'files'> &
+    Image: Schema.Attribute.Media<'images' | 'files'> &
       Schema.Attribute.Required;
+    Quote: Schema.Attribute.Text & Schema.Attribute.Required;
   };
 }
 

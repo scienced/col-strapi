@@ -2,7 +2,8 @@
   "collectionName": "components_thumbnail_customer_story_thumbnails",
   "info": {
     "displayName": "Customer Story Thumbnail",
-    "icon": "picture"
+    "icon": "picture",
+    "description": ""
   },
   "options": {},
   "attributes": {
@@ -18,14 +19,14 @@
       "type": "text",
       "required": true
     },
-    "Thumbnail": {
+    "Image": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
       "allowedTypes": [
         "images",
         "files"
-      ],
-      "type": "media",
-      "multiple": false,
-      "required": true
+      ]
     }
   }
 }
