@@ -1,0 +1,37 @@
+{
+  "kind": "collectionType",
+  "collectionName": "customer_stories",
+  "info": {
+    "singularName": "customer-story",
+    "pluralName": "customer-stories",
+    "displayName": "Customer Story",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "MainBanner": {
+      "type": "component",
+      "repeatable": false,
+      "component": "banner.customer-story-main-banner",
+      "required": true
+    },
+    "HalfImageTextBanner": {
+      "type": "component",
+      "repeatable": true,
+      "component": "banner.half-text-image-banner"
+    },
+    "Quote": {
+      "type": "component",
+      "repeatable": true,
+      "component": "section.quote"
+    },
+    "Text": {
+      "displayName": "Text",
+      "type": "component",
+      "repeatable": true,
+      "component": "section.text"
+    }
+  }
+}

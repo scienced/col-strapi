@@ -460,6 +460,46 @@ export interface ApiBlogBlog extends Struct.CollectionTypeSchema {
   };
 }
 
+export interface ApiCustomerStoryCustomerStory
+  extends Struct.CollectionTypeSchema {
+  collectionName: 'customer_stories';
+  info: {
+    description: '';
+    displayName: 'Customer Story';
+    pluralName: 'customer-stories';
+    singularName: 'customer-story';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    HalfImageTextBanner: Schema.Attribute.Component<
+      'banner.half-text-image-banner',
+      true
+    >;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::customer-story.customer-story'
+    > &
+      Schema.Attribute.Private;
+    MainBanner: Schema.Attribute.Component<
+      'banner.customer-story-main-banner',
+      false
+    > &
+      Schema.Attribute.Required;
+    publishedAt: Schema.Attribute.DateTime;
+    Quote: Schema.Attribute.Component<'section.quote', true>;
+    Text: Schema.Attribute.Component<'section.text', true>;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface PluginContentReleasesRelease
   extends Struct.CollectionTypeSchema {
   collectionName: 'strapi_releases';
@@ -970,6 +1010,7 @@ declare module '@strapi/strapi' {
       'admin::transfer-token-permission': AdminTransferTokenPermission;
       'admin::user': AdminUser;
       'api::blog.blog': ApiBlogBlog;
+      'api::customer-story.customer-story': ApiCustomerStoryCustomerStory;
       'plugin::content-releases.release': PluginContentReleasesRelease;
       'plugin::content-releases.release-action': PluginContentReleasesReleaseAction;
       'plugin::i18n.locale': PluginI18NLocale;

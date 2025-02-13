@@ -1,0 +1,43 @@
+{
+  "collectionName": "components_banner_customer_story_main_banners",
+  "info": {
+    "displayName": "Customer Story Main Banner",
+    "icon": "picture",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "Title": {
+      "type": "string",
+      "required": true
+    },
+    "Quote": {
+      "type": "text"
+    },
+    "PersonName": {
+      "type": "text"
+    },
+    "BannerImage": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "Logo": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    }
+  }
+}
