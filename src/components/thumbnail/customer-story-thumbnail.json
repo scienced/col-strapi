@@ -1,0 +1,31 @@
+{
+  "collectionName": "components_thumbnail_customer_story_thumbnails",
+  "info": {
+    "displayName": "Customer Story Thumbnail",
+    "icon": "picture"
+  },
+  "options": {},
+  "attributes": {
+    "BrandName": {
+      "type": "string",
+      "required": true
+    },
+    "Quote": {
+      "type": "text",
+      "required": true
+    },
+    "Description": {
+      "type": "text",
+      "required": true
+    },
+    "Thumbnail": {
+      "allowedTypes": [
+        "images",
+        "files"
+      ],
+      "type": "media",
+      "multiple": false,
+      "required": true
+    }
+  }
+}

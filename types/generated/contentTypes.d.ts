@@ -493,7 +493,14 @@ export interface ApiCustomerStoryCustomerStory
       Schema.Attribute.Required;
     publishedAt: Schema.Attribute.DateTime;
     Quote: Schema.Attribute.Component<'section.quote', true>;
+    SEO: Schema.Attribute.Component<'general.seo', false> &
+      Schema.Attribute.Required;
     Text: Schema.Attribute.Component<'section.text', true>;
+    Thumbnail: Schema.Attribute.Component<
+      'thumbnail.customer-story-thumbnail',
+      false
+    > &
+      Schema.Attribute.Required;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;

@@ -38,6 +38,10 @@
         "videos",
         "audios"
       ]
+    },
+    "Dark": {
+      "type": "boolean",
+      "default": false
     }
   }
 }

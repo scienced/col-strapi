@@ -12,6 +12,7 @@ export interface BannerCustomerStoryMainBanner extends Struct.ComponentSchema {
       'images' | 'files' | 'videos' | 'audios'
     > &
       Schema.Attribute.Required;
+    Dark: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
     Logo: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
     PersonName: Schema.Attribute.Text;
     Quote: Schema.Attribute.Text;
@@ -30,6 +31,18 @@ export interface BannerHalfTextImageBanner extends Struct.ComponentSchema {
     Image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
     SubTitle: Schema.Attribute.String;
     Title: Schema.Attribute.String;
+  };
+}
+
+export interface GeneralSeo extends Struct.ComponentSchema {
+  collectionName: 'components_general_seos';
+  info: {
+    displayName: 'SEO';
+    icon: 'command';
+  };
+  attributes: {
+    Description: Schema.Attribute.Text & Schema.Attribute.Required;
+    Title: Schema.Attribute.String & Schema.Attribute.Required;
   };
 }
 
@@ -54,13 +67,31 @@ export interface SectionText extends Struct.ComponentSchema {
   attributes: {};
 }
 
+export interface ThumbnailCustomerStoryThumbnail
+  extends Struct.ComponentSchema {
+  collectionName: 'components_thumbnail_customer_story_thumbnails';
+  info: {
+    displayName: 'Customer Story Thumbnail';
+    icon: 'picture';
+  };
+  attributes: {
+    BrandName: Schema.Attribute.String & Schema.Attribute.Required;
+    Description: Schema.Attribute.Text & Schema.Attribute.Required;
+    Quote: Schema.Attribute.Text & Schema.Attribute.Required;
+    Thumbnail: Schema.Attribute.Media<'images' | 'files'> &
+      Schema.Attribute.Required;
+  };
+}
+
 declare module '@strapi/strapi' {
   export module Public {
     export interface ComponentSchemas {
       'banner.customer-story-main-banner': BannerCustomerStoryMainBanner;
       'banner.half-text-image-banner': BannerHalfTextImageBanner;
+      'general.seo': GeneralSeo;
       'section.quote': SectionQuote;
       'section.text': SectionText;
+      'thumbnail.customer-story-thumbnail': ThumbnailCustomerStoryThumbnail;
     }
   }
 }
