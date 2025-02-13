@@ -10,39 +10,78 @@
   "options": {
     "draftAndPublish": true
   },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
   "attributes": {
     "MainBanner": {
       "type": "component",
       "repeatable": false,
       "component": "banner.customer-story-main-banner",
-      "required": true
+      "required": true,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
     },
     "HalfImageTextBanner": {
       "type": "component",
       "repeatable": true,
-      "component": "banner.half-text-image-banner"
+      "component": "banner.half-text-image-banner",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
     },
     "Quote": {
       "type": "component",
       "repeatable": true,
-      "component": "section.quote"
+      "component": "section.quote",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
     },
     "Text": {
       "displayName": "Text",
       "type": "component",
       "repeatable": true,
-      "component": "section.text"
+      "component": "section.text",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
     },
     "SEO": {
       "type": "component",
       "repeatable": false,
       "component": "general.seo",
-      "required": true
+      "required": true,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
     },
     "Thumbnail": {
       "type": "component",
       "repeatable": false,
       "component": "thumbnail.customer-story-thumbnail",
+      "required": true,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "uniqueId": {
+      "type": "uid",
       "required": true
     }
   }

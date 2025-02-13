@@ -472,6 +472,11 @@ export interface ApiCustomerStoryCustomerStory
   options: {
     draftAndPublish: true;
   };
+  pluginOptions: {
+    i18n: {
+      localized: true;
+    };
+  };
   attributes: {
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
@@ -479,28 +484,58 @@ export interface ApiCustomerStoryCustomerStory
     HalfImageTextBanner: Schema.Attribute.Component<
       'banner.half-text-image-banner',
       true
-    >;
-    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    > &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    locale: Schema.Attribute.String;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
       'api::customer-story.customer-story'
-    > &
-      Schema.Attribute.Private;
+    >;
     MainBanner: Schema.Attribute.Component<
       'banner.customer-story-main-banner',
       false
     > &
-      Schema.Attribute.Required;
+      Schema.Attribute.Required &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     publishedAt: Schema.Attribute.DateTime;
-    Quote: Schema.Attribute.Component<'section.quote', true>;
+    Quote: Schema.Attribute.Component<'section.quote', true> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     SEO: Schema.Attribute.Component<'general.seo', false> &
-      Schema.Attribute.Required;
-    Text: Schema.Attribute.Component<'section.text', true>;
+      Schema.Attribute.Required &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    Text: Schema.Attribute.Component<'section.text', true> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     Thumbnail: Schema.Attribute.Component<
       'thumbnail.customer-story-thumbnail',
       false
     > &
-      Schema.Attribute.Required;
+      Schema.Attribute.Required &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    uniqueId: Schema.Attribute.UID & Schema.Attribute.Required;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
