@@ -519,12 +519,6 @@ export interface ApiCustomerStoryCustomerStory
           localized: true;
         };
       }>;
-    Text: Schema.Attribute.Component<'section.text', true> &
-      Schema.Attribute.SetPluginOptions<{
-        i18n: {
-          localized: true;
-        };
-      }>;
     Thumbnail: Schema.Attribute.Component<
       'thumbnail.customer-story-thumbnail',
       false

@@ -47,17 +47,6 @@
         }
       }
     },
-    "Text": {
-      "displayName": "Text",
-      "type": "component",
-      "repeatable": true,
-      "component": "section.text",
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      }
-    },
     "SEO": {
       "type": "component",
       "repeatable": false,
