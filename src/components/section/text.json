@@ -1,9 +1,14 @@
 {
   "collectionName": "components_section_texts",
   "info": {
-    "displayName": "Text",
-    "icon": "pencil"
+    "displayName": "Paragraph",
+    "icon": "pencil",
+    "description": ""
   },
   "options": {},
-  "attributes": {}
+  "attributes": {
+    "Text": {
+      "type": "text"
+    }
+  }
 }

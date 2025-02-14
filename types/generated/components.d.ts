@@ -23,12 +23,14 @@ export interface BannerCustomerStoryMainBanner extends Struct.ComponentSchema {
 export interface BannerHalfTextImageBanner extends Struct.ComponentSchema {
   collectionName: 'components_banner_half_text_image_banners';
   info: {
+    description: '';
     displayName: 'Half Text Image Banner';
     icon: 'alien';
   };
   attributes: {
     Description: Schema.Attribute.Text;
     Image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    Paragraph: Schema.Attribute.Component<'section.text', true>;
     SubTitle: Schema.Attribute.String;
     Title: Schema.Attribute.String;
   };
@@ -61,10 +63,13 @@ export interface SectionQuote extends Struct.ComponentSchema {
 export interface SectionText extends Struct.ComponentSchema {
   collectionName: 'components_section_texts';
   info: {
-    displayName: 'Text';
+    description: '';
+    displayName: 'Paragraph';
     icon: 'pencil';
   };
-  attributes: {};
+  attributes: {
+    Text: Schema.Attribute.Text;
+  };
 }
 
 export interface ThumbnailCustomerStoryThumbnail

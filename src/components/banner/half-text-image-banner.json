@@ -2,7 +2,8 @@
   "collectionName": "components_banner_half_text_image_banners",
   "info": {
     "displayName": "Half Text Image Banner",
-    "icon": "alien"
+    "icon": "alien",
+    "description": ""
   },
   "options": {},
   "attributes": {
@@ -16,14 +17,20 @@
       "type": "text"
     },
     "Image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
       "allowedTypes": [
         "images",
         "files",
         "videos",
         "audios"
-      ],
-      "type": "media",
-      "multiple": false
+      ]
+    },
+    "Paragraph": {
+      "type": "component",
+      "repeatable": true,
+      "component": "section.text"
     }
   }
 }
