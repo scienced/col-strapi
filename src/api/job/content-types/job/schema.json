@@ -1,0 +1,35 @@
+{
+  "kind": "collectionType",
+  "collectionName": "jobs",
+  "info": {
+    "singularName": "job",
+    "pluralName": "jobs",
+    "displayName": "Job",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "JobTitle": {
+      "type": "string",
+      "required": true
+    },
+    "url": {
+      "type": "uid"
+    },
+    "PositionOpen": {
+      "type": "boolean",
+      "default": false
+    },
+    "Location": {
+      "type": "string"
+    },
+    "Body": {
+      "type": "richtext"
+    },
+    "Department": {
+      "type": "string"
+    }
+  }
+}

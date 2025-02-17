@@ -14,7 +14,6 @@ export interface BannerCustomerStoryMainBanner extends Struct.ComponentSchema {
       Schema.Attribute.Required;
     Dark: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
     Logo: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
-    PersonName: Schema.Attribute.Text;
     Quote: Schema.Attribute.Text;
     Title: Schema.Attribute.String & Schema.Attribute.Required;
   };
