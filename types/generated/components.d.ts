@@ -43,6 +43,7 @@ export interface BannerVideoBanner extends Struct.ComponentSchema {
     icon: 'play';
   };
   attributes: {
+    PosterUrl: Schema.Attribute.Media<'images' | 'files'>;
     VideoUrl: Schema.Attribute.Media<'files' | 'videos'>;
   };
 }

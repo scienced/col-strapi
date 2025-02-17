@@ -20,7 +20,7 @@
       "type": "component",
       "repeatable": false,
       "component": "banner.customer-story-main-banner",
-      "required": true,
+      "required": false,
       "pluginOptions": {
         "i18n": {
           "localized": true
@@ -71,7 +71,7 @@
     },
     "url": {
       "type": "uid",
-      "required": true
+      "required": false
     },
     "VideoBanner": {
       "type": "component",

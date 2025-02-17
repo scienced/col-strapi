@@ -499,7 +499,6 @@ export interface ApiCustomerStoryCustomerStory
       'banner.customer-story-main-banner',
       false
     > &
-      Schema.Attribute.Required &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
@@ -532,7 +531,7 @@ export interface ApiCustomerStoryCustomerStory
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    url: Schema.Attribute.UID & Schema.Attribute.Required;
+    url: Schema.Attribute.UID;
     VideoBanner: Schema.Attribute.Component<'banner.video-banner', false>;
   };
 }

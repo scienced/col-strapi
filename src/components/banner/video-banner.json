@@ -15,6 +15,14 @@
         "files",
         "videos"
       ]
+    },
+    "PosterUrl": {
+      "allowedTypes": [
+        "images",
+        "files"
+      ],
+      "type": "media",
+      "multiple": false
     }
   }
 }
