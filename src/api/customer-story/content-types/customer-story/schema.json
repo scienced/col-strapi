@@ -72,6 +72,11 @@
     "url": {
       "type": "uid",
       "required": true
+    },
+    "VideoBanner": {
+      "type": "component",
+      "repeatable": false,
+      "component": "banner.video-banner"
     }
   }
 }

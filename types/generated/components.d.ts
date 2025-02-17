@@ -35,6 +35,18 @@ export interface BannerHalfTextImageBanner extends Struct.ComponentSchema {
   };
 }
 
+export interface BannerVideoBanner extends Struct.ComponentSchema {
+  collectionName: 'components_banner_video_banners';
+  info: {
+    description: '';
+    displayName: 'Video Banner';
+    icon: 'play';
+  };
+  attributes: {
+    VideoUrl: Schema.Attribute.Media<'files' | 'videos'>;
+  };
+}
+
 export interface GeneralSeo extends Struct.ComponentSchema {
   collectionName: 'components_general_seos';
   info: {
@@ -93,6 +105,7 @@ declare module '@strapi/strapi' {
     export interface ComponentSchemas {
       'banner.customer-story-main-banner': BannerCustomerStoryMainBanner;
       'banner.half-text-image-banner': BannerHalfTextImageBanner;
+      'banner.video-banner': BannerVideoBanner;
       'general.seo': GeneralSeo;
       'section.quote': SectionQuote;
       'section.text': SectionText;

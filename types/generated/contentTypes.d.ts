@@ -533,6 +533,7 @@ export interface ApiCustomerStoryCustomerStory
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
     url: Schema.Attribute.UID & Schema.Attribute.Required;
+    VideoBanner: Schema.Attribute.Component<'banner.video-banner', false>;
   };
 }
 
