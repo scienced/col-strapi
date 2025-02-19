@@ -1,5 +1,17 @@
 import type { Schema, Struct } from '@strapi/strapi';
 
+export interface BannerArticleMainBanner extends Struct.ComponentSchema {
+  collectionName: 'components_banner_article_main_banners';
+  info: {
+    displayName: 'Article Main Banner';
+    icon: 'bold';
+  };
+  attributes: {
+    Banner: Schema.Attribute.Media<'files' | 'images'>;
+    Title: Schema.Attribute.String & Schema.Attribute.Required;
+  };
+}
+
 export interface BannerCustomerStoryMainBanner extends Struct.ComponentSchema {
   collectionName: 'components_banner_customer_story_main_banners';
   info: {
@@ -104,6 +116,7 @@ export interface ThumbnailCustomerStoryThumbnail
 declare module '@strapi/strapi' {
   export module Public {
     export interface ComponentSchemas {
+      'banner.article-main-banner': BannerArticleMainBanner;
       'banner.customer-story-main-banner': BannerCustomerStoryMainBanner;
       'banner.half-text-image-banner': BannerHalfTextImageBanner;
       'banner.video-banner': BannerVideoBanner;

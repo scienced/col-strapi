@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_banner_article_main_banners",
+  "info": {
+    "displayName": "Article Main Banner",
+    "icon": "bold"
+  },
+  "options": {},
+  "attributes": {
+    "Title": {
+      "type": "string",
+      "required": true
+    },
+    "Banner": {
+      "allowedTypes": [
+        "files",
+        "images"
+      ],
+      "type": "media",
+      "multiple": false
+    }
+  }
+}
