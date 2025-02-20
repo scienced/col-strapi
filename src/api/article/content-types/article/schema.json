@@ -27,7 +27,7 @@
         }
       }
     },
-    "Title": {
+    "ShortTitle": {
       "type": "string",
       "required": true,
       "pluginOptions": {
@@ -67,6 +67,9 @@
           "localized": true
         }
       }
+    },
+    "LongTitle": {
+      "type": "string"
     }
   }
 }
