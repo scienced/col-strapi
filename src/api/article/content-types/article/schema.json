@@ -70,6 +70,18 @@
     },
     "LongTitle": {
       "type": "string"
+    },
+    "Date": {
+      "type": "date"
+    },
+    "Tag": {
+      "type": "enumeration",
+      "enum": [
+        "News",
+        "Product",
+        "Industry",
+        "Event"
+      ]
     }
   }
 }
