@@ -428,7 +428,7 @@ export interface ApiArticleArticle extends Struct.CollectionTypeSchema {
           localized: true;
         };
       }>;
-    Tag: Schema.Attribute.Enumeration<['News', 'Product', 'Industry', 'Event']>;
+    Tag: Schema.Attribute.Component<'section.article-type', true>;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;

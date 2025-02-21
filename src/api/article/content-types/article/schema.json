@@ -75,13 +75,9 @@
       "type": "date"
     },
     "Tag": {
-      "type": "enumeration",
-      "enum": [
-        "News",
-        "Product",
-        "Industry",
-        "Event"
-      ]
+      "type": "component",
+      "repeatable": true,
+      "component": "section.article-type"
     }
   }
 }

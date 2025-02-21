@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_section_article_types",
+  "info": {
+    "displayName": "ArticleType",
+    "icon": "bulletList"
+  },
+  "options": {},
+  "attributes": {
+    "Tag": {
+      "type": "enumeration",
+      "enum": [
+        "News",
+        "Product",
+        "Industry",
+        "Event"
+      ]
+    }
+  }
+}

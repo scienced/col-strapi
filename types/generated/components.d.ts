@@ -60,6 +60,17 @@ export interface GeneralSeo extends Struct.ComponentSchema {
   };
 }
 
+export interface SectionArticleType extends Struct.ComponentSchema {
+  collectionName: 'components_section_article_types';
+  info: {
+    displayName: 'ArticleType';
+    icon: 'bulletList';
+  };
+  attributes: {
+    Tag: Schema.Attribute.Enumeration<['News', 'Product', 'Industry', 'Event']>;
+  };
+}
+
 export interface SectionQuote extends Struct.ComponentSchema {
   collectionName: 'components_section_quotes';
   info: {
@@ -108,6 +119,7 @@ declare module '@strapi/strapi' {
       'banner.half-text-image-banner': BannerHalfTextImageBanner;
       'banner.video-banner': BannerVideoBanner;
       'general.seo': GeneralSeo;
+      'section.article-type': SectionArticleType;
       'section.quote': SectionQuote;
       'section.text': SectionText;
       'thumbnail.customer-story-thumbnail': ThumbnailCustomerStoryThumbnail;
