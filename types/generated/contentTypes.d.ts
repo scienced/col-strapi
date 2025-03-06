@@ -548,6 +548,7 @@ export interface ApiNavigationThumbnailNavigationThumbnail
   extends Struct.SingleTypeSchema {
   collectionName: 'navigation_thumbnails';
   info: {
+    description: '';
     displayName: 'Navigation Thumbnail';
     pluralName: 'navigation-thumbnails';
     singularName: 'navigation-thumbnail';
@@ -555,22 +556,51 @@ export interface ApiNavigationThumbnailNavigationThumbnail
   options: {
     draftAndPublish: true;
   };
+  pluginOptions: {
+    i18n: {
+      localized: true;
+    };
+  };
   attributes: {
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    Customers: Schema.Attribute.Component<'thumbnail.nav-thumbnail', false>;
-    HowItWorks: Schema.Attribute.Component<'thumbnail.nav-thumbnail', false>;
-    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    Customers: Schema.Attribute.Component<'thumbnail.nav-thumbnail', false> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    HowItWorks: Schema.Attribute.Component<'thumbnail.nav-thumbnail', false> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    locale: Schema.Attribute.String;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
       'api::navigation-thumbnail.navigation-thumbnail'
-    > &
-      Schema.Attribute.Private;
-    Partners: Schema.Attribute.Component<'thumbnail.nav-thumbnail', false>;
-    Products: Schema.Attribute.Component<'thumbnail.nav-thumbnail', false>;
+    >;
+    Partners: Schema.Attribute.Component<'thumbnail.nav-thumbnail', false> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    Products: Schema.Attribute.Component<'thumbnail.nav-thumbnail', false> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     publishedAt: Schema.Attribute.DateTime;
-    Resources: Schema.Attribute.Component<'thumbnail.nav-thumbnail', false>;
+    Resources: Schema.Attribute.Component<'thumbnail.nav-thumbnail', false> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;

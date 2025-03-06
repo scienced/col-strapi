@@ -4,36 +4,67 @@
   "info": {
     "singularName": "navigation-thumbnail",
     "pluralName": "navigation-thumbnails",
-    "displayName": "Navigation Thumbnail"
+    "displayName": "Navigation Thumbnail",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
   },
   "attributes": {
     "HowItWorks": {
       "type": "component",
       "repeatable": false,
-      "component": "thumbnail.nav-thumbnail"
+      "component": "thumbnail.nav-thumbnail",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
     },
     "Products": {
       "type": "component",
       "repeatable": false,
-      "component": "thumbnail.nav-thumbnail"
+      "component": "thumbnail.nav-thumbnail",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
     },
     "Customers": {
       "type": "component",
       "repeatable": false,
-      "component": "thumbnail.nav-thumbnail"
+      "component": "thumbnail.nav-thumbnail",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
     },
     "Partners": {
       "type": "component",
       "repeatable": false,
-      "component": "thumbnail.nav-thumbnail"
+      "component": "thumbnail.nav-thumbnail",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
     },
     "Resources": {
       "type": "component",
       "repeatable": false,
-      "component": "thumbnail.nav-thumbnail"
+      "component": "thumbnail.nav-thumbnail",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
     }
   }
 }
