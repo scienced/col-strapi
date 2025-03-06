@@ -112,6 +112,21 @@ export interface ThumbnailCustomerStoryThumbnail
   };
 }
 
+export interface ThumbnailNavThumbnail extends Struct.ComponentSchema {
+  collectionName: 'components_thumbnail_nav_thumbnails';
+  info: {
+    displayName: 'Nav Thumbnail';
+  };
+  attributes: {
+    Description: Schema.Attribute.Text;
+    Image: Schema.Attribute.Media<'images' | 'files'>;
+    Label: Schema.Attribute.String;
+    LinkText: Schema.Attribute.String;
+    LinkUrl: Schema.Attribute.String;
+    Title: Schema.Attribute.String;
+  };
+}
+
 declare module '@strapi/strapi' {
   export module Public {
     export interface ComponentSchemas {
@@ -123,6 +138,7 @@ declare module '@strapi/strapi' {
       'section.quote': SectionQuote;
       'section.text': SectionText;
       'thumbnail.customer-story-thumbnail': ThumbnailCustomerStoryThumbnail;
+      'thumbnail.nav-thumbnail': ThumbnailNavThumbnail;
     }
   }
 }

@@ -544,6 +544,39 @@ export interface ApiJobJob extends Struct.CollectionTypeSchema {
   };
 }
 
+export interface ApiNavigationThumbnailNavigationThumbnail
+  extends Struct.SingleTypeSchema {
+  collectionName: 'navigation_thumbnails';
+  info: {
+    displayName: 'Navigation Thumbnail';
+    pluralName: 'navigation-thumbnails';
+    singularName: 'navigation-thumbnail';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    Customers: Schema.Attribute.Component<'thumbnail.nav-thumbnail', false>;
+    HowItWorks: Schema.Attribute.Component<'thumbnail.nav-thumbnail', false>;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::navigation-thumbnail.navigation-thumbnail'
+    > &
+      Schema.Attribute.Private;
+    Partners: Schema.Attribute.Component<'thumbnail.nav-thumbnail', false>;
+    Products: Schema.Attribute.Component<'thumbnail.nav-thumbnail', false>;
+    publishedAt: Schema.Attribute.DateTime;
+    Resources: Schema.Attribute.Component<'thumbnail.nav-thumbnail', false>;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface PluginContentReleasesRelease
   extends Struct.CollectionTypeSchema {
   collectionName: 'strapi_releases';
@@ -1056,6 +1089,7 @@ declare module '@strapi/strapi' {
       'api::article.article': ApiArticleArticle;
       'api::customer-story.customer-story': ApiCustomerStoryCustomerStory;
       'api::job.job': ApiJobJob;
+      'api::navigation-thumbnail.navigation-thumbnail': ApiNavigationThumbnailNavigationThumbnail;
       'plugin::content-releases.release': PluginContentReleasesRelease;
       'plugin::content-releases.release-action': PluginContentReleasesReleaseAction;
       'plugin::i18n.locale': PluginI18NLocale;

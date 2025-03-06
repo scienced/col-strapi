@@ -1,0 +1,39 @@
+{
+  "kind": "singleType",
+  "collectionName": "navigation_thumbnails",
+  "info": {
+    "singularName": "navigation-thumbnail",
+    "pluralName": "navigation-thumbnails",
+    "displayName": "Navigation Thumbnail"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "HowItWorks": {
+      "type": "component",
+      "repeatable": false,
+      "component": "thumbnail.nav-thumbnail"
+    },
+    "Products": {
+      "type": "component",
+      "repeatable": false,
+      "component": "thumbnail.nav-thumbnail"
+    },
+    "Customers": {
+      "type": "component",
+      "repeatable": false,
+      "component": "thumbnail.nav-thumbnail"
+    },
+    "Partners": {
+      "type": "component",
+      "repeatable": false,
+      "component": "thumbnail.nav-thumbnail"
+    },
+    "Resources": {
+      "type": "component",
+      "repeatable": false,
+      "component": "thumbnail.nav-thumbnail"
+    }
+  }
+}
