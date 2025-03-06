@@ -115,12 +115,12 @@ export interface ThumbnailCustomerStoryThumbnail
 export interface ThumbnailNavThumbnail extends Struct.ComponentSchema {
   collectionName: 'components_thumbnail_nav_thumbnails';
   info: {
+    description: '';
     displayName: 'Nav Thumbnail';
   };
   attributes: {
     Description: Schema.Attribute.Text;
     Image: Schema.Attribute.Media<'images' | 'files'>;
-    Label: Schema.Attribute.String;
     LinkText: Schema.Attribute.String;
     LinkUrl: Schema.Attribute.String;
     Title: Schema.Attribute.String;
