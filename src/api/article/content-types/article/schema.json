@@ -29,12 +29,12 @@
     },
     "ShortTitle": {
       "type": "string",
-      "required": true,
       "pluginOptions": {
         "i18n": {
           "localized": true
         }
-      }
+      },
+      "required": true
     },
     "Description": {
       "type": "text",
@@ -46,27 +46,27 @@
     },
     "MainImage": {
       "type": "media",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
       "multiple": false,
       "required": false,
       "allowedTypes": [
         "images",
         "files"
-      ],
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      }
+      ]
     },
     "SEO": {
       "type": "component",
-      "repeatable": false,
-      "component": "general.seo",
       "pluginOptions": {
         "i18n": {
           "localized": true
         }
-      }
+      },
+      "component": "general.seo",
+      "repeatable": false
     },
     "LongTitle": {
       "type": "string"
@@ -76,8 +76,17 @@
     },
     "Tag": {
       "type": "component",
-      "repeatable": true,
-      "component": "section.article-type"
+      "component": "section.article-type",
+      "repeatable": true
+    },
+    "ShowInOverview": {
+      "type": "boolean",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "default": true
     }
   }
 }
