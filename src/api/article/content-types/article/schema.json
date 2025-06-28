@@ -79,14 +79,14 @@
       "component": "section.article-type",
       "repeatable": true
     },
-    "ShowInOverview": {
+    "HideInOverview": {
       "type": "boolean",
       "pluginOptions": {
         "i18n": {
           "localized": true
         }
       },
-      "default": true
+      "default": false
     }
   }
 }
